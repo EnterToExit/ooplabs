@@ -1,5 +1,3 @@
-package com.company;
-
 public class Prak1 {
     public int convert(int minutes){
         return 60 * minutes;

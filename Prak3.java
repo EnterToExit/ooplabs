@@ -1,5 +1,3 @@
-package com.company;
-
 import sun.security.util.ArrayUtil;
 
 import java.text.DecimalFormat;
