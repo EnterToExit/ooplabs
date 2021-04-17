@@ -1,14 +1,15 @@
-package com.company;
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please pick a lab > ");
         int main_choice = scanner.nextInt();
         int choice = 1;
+
         try {
             switch (main_choice) {
                 case 1:
@@ -166,6 +167,63 @@ public class Main {
                             }
                         } catch (Exception e) {
                             System.out.println(e);
+                            scanner.next();
+                        }
+                    }
+                case 4:
+                    Prak4 prak4 = new Prak4();
+                    while (choice != 0) {
+                        try {
+                            System.out.print("Please pick a number to test function > ");
+                            choice = scanner.nextInt();
+                            if (choice >= 1 && choice <= 10)
+                                System.out.println("Please enter arguments");
+                            switch (choice) {
+                                case 1:
+                                    int[] array = {2, 55, 60, 97, 86};
+                                    prak4.sevenBoom(array);
+                                    break;
+                                case 2:
+                                    int[] array2 = {1, 2, 3, 4, 4, 5};
+                                    System.out.println(prak4.cons(array2));
+                                    break;
+                                case 3:
+                                    System.out.println(prak4.unmix("hTsii  s aimex dpus rtni.g"));
+                                    break;
+                                case 4:
+                                    System.out.println(prak4.noYelling("What went??? wrong!!!!!!!!!"));
+                                    break;
+                                case 5:
+                                    System.out.println(prak4.xPronounce("The x ray is excellent deus ex"));
+                                    break;
+                                case 6:
+                                    int[] array3 = {13, 123, 8, 5, 5, 2, 13, 6, 14, 2, 11, 4, 10, 8, 1, 90};
+                                    System.out.println(prak4.largestGap(array3));
+                                    break;
+                                case 7:
+                                    System.out.println(prak4.ugadaika(scanner.nextInt()));
+                                    break;
+                                case 8:
+                                    System.out.println(prak4.commonLastVowel("Hello World!"));
+                                    break;
+                                case 9:
+                                    System.out.println(prak4.memeSum(1222, 30277));
+                                    break;
+                                case 10:
+                                    System.out.println(prak4.unrepeated("teshahset"));
+                                    System.out.println(prak4.unrepeated("hello"));
+                                    System.out.println(prak4.unrepeated("aaaaa"));
+                                    System.out.println(prak4.unrepeated("WWE!!!"));
+                                    System.out.println(prak4.unrepeated("call 911"));
+                                    break;
+                                case 0:
+                                    System.out.println("Goodbye!");
+                                    break;
+                                default:
+                                    System.out.println("No such function");
+                            }
+                        } catch (Exception e) {
+                            System.out.println("invalid argument");
                             scanner.next();
                         }
                     }
