@@ -1,6 +1,3 @@
-import sun.security.util.ArrayUtil;
-
-import java.text.DecimalFormat;
 import java.util.*;
 
 
@@ -44,13 +41,15 @@ public class Prak3 {
         states.put("paper", 3);
         int player1 = states.get(arg1);
         int player2 = states.get(arg2);
-        int result = Math.abs(player1 - player2);
+        int result = player1 - player2;
         String gameResult = "Draw";
         switch (result) {
             case 2:
+            case -1:
                 gameResult = "Player 1 wins";
                 break;
             case 1:
+            case -2:
                 gameResult = "Player 2 wins";
                 break;
         }
