@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please pick a lab > ");
+        System.out.print("Please pick a block > ");
+
         int main_choice = scanner.nextInt();
         int choice = 1;
 
