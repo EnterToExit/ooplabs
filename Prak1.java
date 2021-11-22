@@ -29,4 +29,7 @@ public class Prak1 {
     public int mod(int a, int b){
         return a - Math.floorDiv(a, b)*b;
     }
+    public void greetings(){
+        System.out.println("Greetings!");
+    }
 }

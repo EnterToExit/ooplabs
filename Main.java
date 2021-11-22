@@ -9,6 +9,8 @@ public class Main {
         int main_choice = scanner.nextInt();
         int choice = 1;
 
+        greetings();
+
         try {
             switch (main_choice) {
                 case 1:
